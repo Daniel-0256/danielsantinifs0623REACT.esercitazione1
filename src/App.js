@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import MyNav from './components/MyNav';
+import Footer from './components/Footer';
+import CardList from './components/Home';
+import Generi from './components/Generi';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <MyNav />
+      <Generi />
+      <h6 className='bg-dark text-light m-0 ps-4'>Harry Potter</h6>
+      <CardList searchFilms='Harry%20Potter'/>
+      <h6 className='bg-dark text-light m-0 ps-4'>Avengers</h6>
+      <CardList searchFilms='avengers'/>
+      <h6 className='bg-dark text-light m-0 ps-4'>Star Wars</h6>
+      <CardList searchFilms='star%20wars'/>
+      <Footer />
     </div>
   );
 }
